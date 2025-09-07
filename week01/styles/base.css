@@ -1,0 +1,55 @@
+/*************** Wide screen - base.css *******************/
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+/*************** Header *******************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    align-items: end;
+    border-bottom: solid #ddd;
+    column-gap: 8px;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4px;
+}
+
+header span {
+    font-size: 1.2em;
+    color: #3D405B;
+}
+
+
+/*************** Humburger button *******************/
+.humburger {
+    background: none;
+    border: none;
+    color: #3D405B;
+    cursor: pointer; 
+}
+
+.humburger::before {
+    content: "\2630";
+    font-size: 2em;
+}
+
+.humburger.show::before {
+    content: "\2715";
+    font-size: 2em;
+}
+
+/*************** Navigation *******************/
+.navigation {
+    display: none;;
+}
+
+.navigation.show {
+    display: block;
+}
