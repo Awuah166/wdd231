@@ -26,6 +26,23 @@ header span {
     margin-top: 0.4rem;
 }
 
+/* Shared baseline for selected components */
+.course,
+.course h2,
+.course-list,
+.course-numbers,
+.course-numbers h4,
+.emoticons,
+.emoticons img,
+.hamburger,
+.main-grid,
+.main-grid>section,
+.main-grid>section h2,
+.photo-section .student-photo,
+header {
+    font-size: 13px;
+}
+
 /* Humburger button */
 .hamburger {
     display: none;
@@ -225,6 +242,7 @@ nav.navigation .active a {
     align-items: start;
     margin-top: 0.75rem;
 }
+
 .course-numbers h4 {
     background: #eee;
     padding: 0.5rem 0.75rem;

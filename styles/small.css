@@ -168,4 +168,24 @@
         margin: 0;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     }
+
+    /* Grouped small-screen tweaks: ensure consistent font-size and padding for listed selectors */
+    .course,
+    .course h2,
+    .course-list,
+    .course-numbers,
+    .course-numbers h4,
+    .emoticons,
+    .emoticons img,
+    .hamburger,
+    .main-grid,
+    .main-grid>section,
+    .main-grid>section h2,
+    .photo-section .student-photo,
+    header {
+        font-size: 13px;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        box-sizing: border-box;
+    }
 }
