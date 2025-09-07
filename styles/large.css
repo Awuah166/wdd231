@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header: image and text side by side, small image */
+header {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem;
+    margin-left: 0;
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+}
+
+header span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #222;
+    margin-top: 0.4rem;
+}
+
+/* Humburger button */
+.hamburger {
+    display: none;
+}
+
+/* Navigation */
+/* Navigation Bar Styles */
+nav.navigation {
+    background: #222;
+    padding: 0.5rem 0;
+    border-radius: 0;
+    margin: 0.2rem 0 0.5rem 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+nav.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+nav.navigation li {
+    display: inline-block;
+}
+
+nav.navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav.navigation a:hover {
+    background: #4e4b51;
+    color: #222;
+}
+
+nav.navigation .active a {
+    background: #4e4b51;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Large-screen layout: two-column main grid */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* main content and sidebar */
+    gap: 1.5rem;
+    align-items: stretch;
+    /* ensure columns stretch to same height */
+}
+
+.main-grid .student-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Card styling for main-grid children */
+.main-grid>section {
+    background: #eee;
+    padding: 0.35rem;
+    /* reduced padding to lower card height */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    /* let the flex item fill the grid track */
+}
+
+/* Slight spacing for headings inside cards */
+.main-grid>section h2 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.intro h2 {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    margin-left: -0.5rem;
+    /* negate card padding */
+    margin-right: -0.5rem;
+    padding: 0.75rem 0;
+
+}
+
+.photo-section h2 {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    margin-left: -0.5rem;
+    /* negate card padding */
+    margin-right: -0.5rem;
+    padding: 0.75rem 0;
+
+}
+
+/* On large screens make each card H2 stretch to the card edges and cover the top padding */
+.main-grid>section h2 {
+    margin-left: -0.5rem;
+    /* negate section padding */
+    margin-right: -0.5rem;
+    margin-top: -0.5rem;
+    /* pull up to cover top padding */
+    padding: 0.5rem 0;
+    /* reduced vertical padding */
+}
+
+/* limit photo height so the photo card stays compact */
+.photo-section .student-photo {
+    max-height: 220px;
+    width: auto;
+    object-fit: cover;
+}
+
+/* Emoticons: three columns and centered */
+.emoticons {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 0.75rem;
+    justify-content: center;
+    /* center the grid within its container */
+    justify-items: center;
+    /* center each item in its column */
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.emoticons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+
+
+/* space between the main grid and the course section */
+.course {
+    margin-top: 1.5rem;
+}
+
+/* center the photo only (keep the h2 band unchanged) */
+.photo-section .student-photo {
+    display: block;
+    margin: 0.5rem auto 0;
+    /* center horizontally, small top gap */
+    max-width: 200px;
+    /* limit visual size */
+    height: auto;
+}
+
+.course h2 {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+/* space between main grid and course on small screens */
+.course {
+    margin-top: 0.5rem;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+    margin-top: 0.75rem;
+}
+
+.course-list h3 {
+    background: #eee;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.course-numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: start;
+    margin-top: 0.75rem;
+}
+.course-numbers h4 {
+    background: #eee;
+    padding: 0.5rem 0.75rem;
+    border: solid #ddd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.text {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    background: #eee;
+    color: #000;
+    padding: 1rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,171 @@
+/* Hamburger and nav for small screens */
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger {
+        background: none;
+        border: none;
+        color: #3D405B;
+        cursor: pointer;
+        display: block;
+        margin-left: auto;
+        /* push to the right */
+    }
+
+    .hamburger::before {
+        content: "\2630";
+        font-size: 2em;
+    }
+
+    .hamburger.show::before {
+        content: "\2715";
+        font-size: 2em;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .navigation.show {
+        display: block;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .navigation.show ul {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navigation.show li {
+        display: block;
+        margin: 0;
+        /* remove gaps so hover covers full height */
+    }
+
+    /* subtle separators between items */
+    .navigation.show li+li a {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* remove top spacing for the very first visible item */
+    .navigation.show li:first-child,
+    .navigation.show li:first-of-type {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    /* remove bottom spacing for the last visible item */
+    .navigation.show li:last-child,
+    .navigation.show li:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    /* make anchors fill the available width so hover covers full width */
+    .navigation.show a {
+        display: block;
+        width: 100%;
+        padding: 0.6rem 0.75rem;
+        /* tighter vertical padding */
+        box-sizing: border-box;
+        text-decoration: none;
+        color: #fff;
+        /* white link text */
+    }
+
+    /* Emoticons: three columns and centered on small screens as well */
+    .emoticons {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 0.5rem;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        margin-top: 0.75rem;
+    }
+
+    .emoticons img {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+    }
+
+
+    .navigation.show a:hover {
+        background: #fff;
+        color: #222;
+        /* dark text on white hover */
+        outline: 2px solid #222;
+        /* visible border on hover */
+        outline-offset: -2px;
+        /* prevent layout shift */
+    }
+
+    /* Stack main-grid cards and keep them away from page edges */
+    .main-grid {
+        display: block;
+        padding: 0 1rem;
+        /* horizontal padding so cards don't touch edges */
+    }
+
+    .main-grid>section {
+        margin: 0.5rem 0;
+        /* vertical spacing between stacked cards */
+        overflow: hidden;
+    }
+
+    /* Prevent the course section and its heading/cards from touching the page edges */
+    .course {
+        padding: 0 1rem;
+        box-sizing: border-box;
+        margin-top: 0.75rem;
+    }
+
+    /* Remove any negative margins applied for large screens so the h2 band stays within padding */
+    .course h2 {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.5rem 0.5rem;
+        background-color: #222;
+        color: #fff;
+        text-align: center;
+    }
+
+    /* Keep course list away from page edges and show three columns on small screens */
+    .course-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        margin-top: 0.75rem;
+    }
+
+    /* Stack course numbers vertically on small screens */
+    .course-numbers {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 0.5rem;
+        justify-items: center;
+    }
+
+    .course-numbers h4 {
+        background: #eee;
+        padding: 0.5rem 0.75rem;
+        border: solid #ddd;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+}
