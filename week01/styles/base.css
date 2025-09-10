@@ -81,3 +81,35 @@ header span {
 h1 {
     margin-left: 10px;
 }
+
+/*************** Footer *******************/
+footer {
+    background-color: #eee;
+    padding: 1rem 10px;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border:  solid 1px #ddd;
+    border-radius: 22px;
+}
+
+.socials img {
+    width: 24px;
+    height: 24px;
+}
+
+.socials a:hover {
+    background-color: #E07A5f;
+}

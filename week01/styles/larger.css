@@ -22,10 +22,11 @@
     }
 
     .navigation ul {
-        display: flex;;
+        display: flex;
+        ;
     }
 
-    .navigation a{
+    .navigation a {
         border: none;
     }
 }
