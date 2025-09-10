@@ -32,7 +32,7 @@ header span {
     background: none;
     border: none;
     color: #3D405B;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 .humburger::before {
@@ -47,14 +47,15 @@ header span {
 
 /*************** Navigation *******************/
 .navigation {
-    display: none;;
+    display: none;
+    ;
 }
 
 .navigation.show {
     display: block;
 }
 
-.navigation ul{
+.navigation ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -72,7 +73,7 @@ header span {
     background-color: #ddd;
 }
 
-.navigation a:hover{
+.navigation a:hover {
     background-color: #E07A5f;
     color: #fff;
 }
@@ -101,7 +102,7 @@ footer {
     align-items: center;
     width: 44px;
     height: 44px;
-    border:  solid 1px #ddd;
+    border: solid 1px #ddd;
     border-radius: 22px;
 }
 
