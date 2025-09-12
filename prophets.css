@@ -1,3 +1,4 @@
+/*Global Styles*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,26 +6,15 @@
     font-family: 'Playfair Display', sans-serif;
     color: #1e293b;
 }
+
+/* H1 Styles */
 h1 {
     text-align: center;
     padding: 10px;
     color: darkblue;
 }
 
-main {
-    max-width: 1200px;
-    width: 100%;
-    margin: 32px auto 24px auto;
-    padding: 16px 0;
-    background-color: #f5f7fa;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    overflow-x: auto;
-}
-
+/* Main Styles */
 main {
     max-width: 1200px;
     width: 100%;
@@ -39,6 +29,7 @@ main {
     overflow-x: auto;
 }
 
+/* Cards Grid */
 #cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -49,6 +40,7 @@ main {
     background: none;
 }
 
+/* Individual Card Styles */
 #cards section {
     background: #fff;
     border: 1px solid #dbeafe;
@@ -61,16 +53,18 @@ main {
     transition: transform 0.15s, box-shadow 0.15s;
 }
 
+/* Card Image Styles */
 #cards img {
     margin-top: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    width: 220px !important;
-    height: 300px !important;
+    width: 220px;
+    height: 300px;
     object-fit: cover;
     display: block;
 }
 
+/* Card Text Styles */
 #cards h2 {
     text-align: center;
     color: darkblue;
@@ -81,6 +75,7 @@ main {
     text-align: center;
 }
 
+/* Footer Styles */
 footer {
     text-align: center;
     font-size: 0.875rem;
@@ -91,6 +86,7 @@ footer {
     background-color: #f5f7fa;
 }
 
+/* Responsive Design */
 @media (max-width: 900px) {
     #cards {
         grid-template-columns: repeat(2, 1fr);
