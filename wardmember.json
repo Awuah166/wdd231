@@ -1,0 +1,25 @@
+{
+    "familyName": "Awuah",
+    "date": "2024-06-10",
+    "numberOfPeople": 8,
+    "visitedTheBishop": true,
+    "familyMembers": [
+        {
+            "name": "Dennis Awuah",
+            "gender": "male",
+            "birthdate": "2004-05-15"
+        },
+        {
+            "name": "Eunice Awuah",
+            "gender": "female",
+            "birthdate": "2006-08-22"
+        },
+        {
+            "name": "Micheal Awuah",
+            "gender": "male",
+            "birthdate": "2010-12-05"
+        }
+
+    ]
+
+}
