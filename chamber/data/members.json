@@ -1,0 +1,74 @@
+{
+    "members": [ 
+        {
+            "name": "TechNova Solutions",
+            "address": "123 Innovation Drive, Silicon City",
+            "phone": "(555) 123-4567",
+            "website": "https://www.technova.com",
+            "membershipLevel": "Gold",
+            "order": 1,
+            "logo": "https://technova.com/wp-content/uploads/2025/05/logo2-300x300.jpg",
+            "description": "Leading provider of cloud-based business solutions."
+        },
+        {
+            "name": "GreenLeaf Landscaping",
+            "address": "456 Garden Lane, Greenfield",
+            "phone": "(555) 234-5678",
+            "website": "https://www.greenleaf.com",
+            "membershipLevel": "Silver",
+            "order": 2,
+            "logo": "https://www.greenleaf.com/grlf_logo2.gif",
+            "description": "Eco-friendly landscaping and outdoor design services."
+        },
+        {
+            "name": "BrightPath Education",
+            "address": "789 Learning Ave, Edutown",
+            "phone": "(555) 345-6789",
+            "website": "https://www.brightpathedu.co.uk",
+            "membershipLevel": "Bronze",
+            "order": 3,
+            "logo": "https://usercontent.one/wp/www.brightpathedu.co.uk/wp-content/uploads/2025/03/Bright-Path-Edu-Logo-e1742431103263.webp?media=1742748594",
+            "description": "Innovative educational programs for all ages."
+        },
+        {
+            "name": "Urban Eats Cafe",
+            "address": "321 Foodie Blvd, Downtown",
+            "phone": "(555) 456-7890",
+            "website": "https://urbaneatsstl.com",
+            "membershipLevel": "Gold",
+            "order": 4,
+            "logo": "https://urbaneatsstl.com/wp-content/uploads/2020/12/cropped-ue_logo_web-copy-1.png",
+            "description": "Trendy cafe serving organic and locally sourced meals."
+        },
+        {
+            "name": "Peak Fitness Center",
+            "address": "654 Wellness Rd, Fit City",
+            "phone": "(555) 567-8901",
+            "website": "https://www.peakfitness.fit",
+            "membershipLevel": "Silver",
+            "order": 5,
+            "logo": "https://cdn.prod.website-files.com/65a49d6806a5231e6e799ab8/65b07ac5292b2c9fad38fa51_Logo%20-%20Dark.webp",
+            "description": "State-of-the-art gym and wellness center."
+        },
+        {
+            "name": "Sunrise Travel Agency",
+            "address": "987 Adventure St, Wanderlust",
+            "phone": "(555) 678-9012",
+            "website": "https://www.travelsunrise.com",
+            "membershipLevel": "Bronze",
+            "order": 6,
+            "logo": "https://www.travelsunrise.com/assets/images/SUN_Logo-Copy.png",
+            "description": "Personalized travel planning and booking services."
+        },
+        {
+            "name": "BlueWave IT Services",
+            "address": "159 Tech Park, Silicon City",
+            "phone": "(555) 789-0123",
+            "website": "https://bluewave-it.com/",
+            "membershipLevel": "Gold",
+            "order": 7,
+            "logo": "https://bluewave-it.com/wp-content/uploads/2021/11/Blue-Wave-IT-logo-e1636999475324.png",
+            "description": "Comprehensive IT support and consulting."
+        }
+    ]
+}
