@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Weija Chamber of Commerce</title>
     <meta name="description" content="Weija Chamber of Commerce Directory">
-    <meta name="author" content="Awuah Dennis"> 
+    <meta name="author" content="Awuah Dennis">
     <link rel="icon" href="images/chamber-of-commerce.png">
 
     <!--SOCIAL MEDIA META TAGS-->
@@ -20,18 +21,21 @@
     <link rel="stylesheet" href="styles/directory.css">
     <script src="scripts/directory.js" defer></script>
 </head>
+
 <body>
     <header>
         <img src="images/chamber-of-commerce.png" alt="chamber of commerce logo">
         <span>New Weija Chamber of Commerce</span>
+
         <nav id="nav-bar" class="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="chamber-project.html">Discover</a></li>
-            <li><a href="directory.html">Directory</a></li>
-            <li class="active"><a href="directory.html">Join</a></li>
-        </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber-project.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="active"><a href="directory.html">Join</a></li>
+            </ul>
         </nav>
+        <button id="hum-btn" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     </header>
     <main>
         <h1>Business Directory</h1>
@@ -41,6 +45,34 @@
         </section>
         <div id="cards"></div>
     </main>
-    <footer></footer>
+
+    <footer>
+        <div class="chamber-footer">
+            <h5>New Weija Chamber of Commerce</h3>
+            <p>Weija-Junction Weija, Near ITS</p>
+            <p>Email: info@wgma.gov.gh</p>
+            <p>(0)30 396 6118</p>
+        </div>
+
+        <div class="socials">
+            <a href="https://youtube.com" target="_blank" >
+                <img src="images/youtube.svg" alt="youtube icon">
+            </a>
+            <a href="https://twitter.com/weijachamber" target="_blank">
+                <img src="images/twitter-x (1).svg" alt="twitter icon">
+            </a>
+            <a href="https://www.LinkedIn.com" target="_blank">
+                <img src="images/linkedin (1).svg" alt="linkedin icon">
+            </a>
+        </div>
+
+        <div class="info">
+            <p>WDD231 Class Project</p>
+            <p>Awuah Dennis</p>
+            <p>&copy; <span id="currentYear"></span> Weija Chamber of Commerce</p>
+            <p>Last Modified<span id="lastModified"></span></p>
+        </div>
+    </footer>
 </body>
+
 </html>
