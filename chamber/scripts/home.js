@@ -211,6 +211,7 @@ function displayWeather(data) {
     // Update weather icon and description
     weatherIcon.setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
     weatherIcon.setAttribute('alt', description);
+    weatherIcon.style.display = 'block'; // Show the image once data is loaded
 
     // Update weather description with all details - structured for side-by-side layout
     weatherDesc.innerHTML = `
