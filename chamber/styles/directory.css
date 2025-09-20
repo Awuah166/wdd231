@@ -87,6 +87,296 @@ main {
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
 }
 
+/* ========== Main Content Three-Column Layout ========== */
+main h1 {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Three-column layout container for main sections */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 0.5rem;
+    align-items: stretch;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Individual section styling */
+.events,
+.current-weather,
+.weather-forecast {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+}
+
+.events h2,
+.current-weather h2,
+.weather-forecast h2 {
+    color: #fff;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: left;
+    background-color: var(--primary-color);
+    border-radius: 8px 8px 0 0;
+}
+
+/* Events section - wider column */
+.events {
+    grid-column: 1;
+}
+
+.events .event-card {
+    background: #f8f9fa;
+    padding: 1.25rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.events .event-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.events .event-card p {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Weather sections - narrower columns */
+.current-weather {
+    grid-column: 2;
+}
+
+/* Weather layout - icon and text side by side */
+.current-weather figure {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 0;
+}
+
+.current-weather #weather-icon {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.current-weather #weather-description {
+    flex: 1;
+    text-align: left;
+}
+
+.weather-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.current-temp {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.weather-desc {
+    font-size: 1rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.85rem;
+    color: black;
+}
+
+.weather-forecast {
+    grid-column: 3;
+}
+
+/* Weather forecast day styling - normal font weight for day names, bold for temperatures */
+.weather-forecast #day1,
+.weather-forecast #day2,
+.weather-forecast #day3 {
+    font-weight: normal;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.weather-forecast .temp-bold {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Responsive: Stack on smaller screens */
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .events,
+    .current-weather,
+    .weather-forecast {
+        grid-column: 1;
+    }
+}
+
+/* ========== Spotlight Section ========== */
+.spotlight {
+    margin: 3rem auto 2rem auto;
+    max-width: 1200px;
+    padding: 0 12px;
+}
+
+.spotlight h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+#spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.spotlight-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Header section - company name and tagline */
+.card-header {
+    text-align: center;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.spotlight-card h2 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.tagline {
+    color: black;
+    font-style: italic;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.3;
+}
+
+/* Content section - logo and details side by side */
+.card-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.spotlight-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-details p {
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+.card-details a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.card-details a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.membership-level {
+    background: var(--primary-color);
+    color: white !important;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem !important;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.5rem !important;
+}
+
+/* Responsive spotlight layout */
+@media (max-width: 900px) {
+    #spotlight-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .spotlight {
+        margin: 2rem auto 1.5rem auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .spotlight-card {
+        padding: 1.25rem;
+    }
+
+    .spotlight-logo {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 /* ========== Directory Grid ========== */
 /* Center images in directory-controls */
 .directory-controls {
@@ -213,6 +503,51 @@ main {
     transition: transform 0.15s, box-shadow 0.15s;
 }
 
+/* styling the hero image */
+.hero-image {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 20px;
+    border-radius: 8px;
+    max-width: 300px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.hero-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 0;
+    opacity: 0.9;
+    line-height: 1.3;
+}
+
+
+
 
 
 /* Mobile: simple right-side hamburger that toggles nav in-flow */
@@ -279,6 +614,28 @@ main {
     /* Make the view icons clearly clickable on small screens */
     .directory-controls img {
         cursor: pointer;
+    }
+
+    /* Reduce hero image height on mobile */
+    .hero-image img {
+        max-height: 250px;
+    }
+
+    /* Hero text responsive styling for mobile */
+    .hero-text {
+        bottom: 8px;
+        right: 8px;
+        padding: 10px 12px;
+        max-width: 180px;
+    }
+
+    .hero-text h3 {
+        font-size: 0.95rem;
+        margin-bottom: 2px;
+    }
+
+    .hero-text p {
+        font-size: 0.7rem;
     }
 }
 

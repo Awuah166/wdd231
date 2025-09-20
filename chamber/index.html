@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Weija Chamber of Commerce</title>
+    <meta name="description" content="Weija Chamber of Commerce">
+    <meta name="author" content="Awuah Dennis">
+    <link rel="icon" href="images/chamber-of-commerce.png">
+
+    <!--SOCIAL MEDIA META TAGS-->
+    <meta property="og:title" content="Weija Chamber of Commerce">
+    <meta property="og:description" content="Weija Chamber of Commerce">
+    <meta property="og:image" content="images/chamber-of-commerce.png">
+    <meta property="og:url" content="https://index.html">
+
+    <!--LINKS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/chamber-of-commerce.png" alt="chamber of commerce logo">
+        <span>New Weija Chamber of Commerce</span>
+
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber-project.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li class="active"><a href="directory.html">Join</a></li>
+            </ul>
+        </nav>
+        <button id="hum-btn" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+    <div class="hero-image">
+        <img src="images/chamber-of-commerce.jpg" alt="chamber of commerce hero image">
+        <div class="hero-text">
+            <h3>New Weija Chamber of Commerce</h3>
+            <p>Empowering Businesses, Enriching Communities</p>
+        </div>
+    </div>
+    <main>
+        <h1>Home</h1>
+        <div class="main-content">
+            <section class="events">
+                <h2>Upcoming Events</h2>
+                <div class="event-card">
+                    <h3>Business Networking Mixer</h3>
+                    <p>Date: July 15, 2024</p>
+                    <p>Time: 6:00 PM - 8:00 PM</p>
+                    <p>Location: Weija Community Center</p>
+                    <p>Join us for an evening of networking with local business owners and entrepreneurs. Expand your
+                        connections and explore new opportunities!</p>
+                </div>
+            </section>
+
+            <section class="current-weather">
+                <h2>Current Weather</h2>
+                <figure>
+                    <img id="weather-icon" src="" alt="">
+                    <figcaption id="weather-description"></figcaption>
+                </figure>
+            </section>
+
+            <section class="weather-forecast">
+                <h2>Weather Forecast</h2>
+                <div class="forecast-day">
+                    <h3 id="day1"></h3>
+                    <p id="temp1"></p>
+                    <h3 id="day2"></h3>
+                    <p id="temp2"></p>
+                    <h3 id="day3"></h3>
+                    <p id="temp3"></p>
+                </div>
+            </section>
+        </div>
+
+        <section class="spotlight">
+            <div id="spotlight-container"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="chamber-footer">
+            <h5>New Weija Chamber of Commerce</h5>
+            <p>Weija-Junction Weija, Near ITS</p>
+            <p>Email: info@wgma.gov.gh</p>
+            <p>(0)30 396 6118</p>
+        </div>
+
+        <div class="socials">
+            <a href="https://youtube.com" target="_blank">
+                <img src="images/youtube.svg" alt="youtube icon">
+            </a>
+            <a href="https://twitter.com/weijachamber" target="_blank">
+                <img src="images/twitter.svg" alt="twitter icon">
+            </a>
+            <a href="https://www.LinkedIn.com" target="_blank">
+                <img src="images/linkedin.svg" alt="linkedin icon">
+            </a>
+        </div>
+
+        <div class="info">
+            <p>WDD231 Class Project</p>
+            <p>Awuah Dennis</p>
+            <p>&copy; <span id="currentYear"></span> Weija Chamber of Commerce</p>
+            <p>Last Modified<span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
