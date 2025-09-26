@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic HTML5 meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Weija Chamber of Commerce</title>
+
+    <!-- SEO and page description meta tags -->
+    <meta name="description" content="Weija Chamber of Commerce Join Page">
+    <meta name="author" content="Awuah Dennis">
+    <link rel="icon" href="images/chamber-of-commerce.png">
+
+    <!-- Social media meta tags for better sharing -->
+    <meta property="og:title" content="Weija Chamber of Commerce">
+    <meta property="og:description" content="Weija Chamber of Commerce">
+    <meta property="og:image" content="images/chamber-of-commerce.png">
+    <meta property="og:url" content="https://index.html">
+
+    <!-- External font and stylesheet links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/directory.css">
+
+    <!-- JavaScript files loaded with defer for better performance -->
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <!-- Main site header with logo, title, navigation and mobile menu -->
+    <header>
+        <!-- Chamber of Commerce logo -->
+        <img src="images/chamber-of-commerce.png" alt="chamber of commerce logo">
+
+        <!-- Site title/brand name -->
+        <span>New Weija Chamber of Commerce</span>
+
+        <!-- Main navigation menu -->
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber-project.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <!-- Current page marked as active -->
+                <li class="active"><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile hamburger menu button for responsive navigation -->
+        <button id="hum-btn" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <!-- Main content area - currently empty, ready for join form implementation -->
+    <main>
+        <h1>Join the Chamber</h1>
+        <section class="join-info">
+            <h2>Become a Member</h2>
+            <p>Join the New Weija Chamber of Commerce to connect with local businesses, access resources, and
+                participate in community events. Membership benefits include networking opportunities, business
+                promotion, and advocacy support.</p>
+        </section>
+
+        <!-- Two-column container for form and membership cards -->
+        <div class="join-container">
+            <!-- Left side - Application Form -->
+            <div>
+                <form method="GET" action="thankyou.html" class="join-form">
+                    <h3>Membership Application Form</h3>
+                    <label>First Name <input type="text" name="first" required autocomplete="given-name"
+                            title="Your First Name"></label>
+                    <label>Last Name <input type="text" name="last" required autocomplete="family-name"
+                            title="Your Last Name"></label>
+                    <label>Organizational Title<input type="text" name="title" autocomplete="organization-title"
+                            pattern="[A-Za-z\s\-]{7,}"
+                            title="Please enter your organizational title (minimum 7 characters, letters, spaces, and hyphens only)"
+                            required></label>
+                    <label>Email<input type="email" name="email" placeholder="dennis20@gmail.com" autocomplete="email"
+                            title="Your Email"></label>
+                    <label>Phone Number<input type="tel" name="phone" placeholder="+233 24 123 4567"
+                            pattern="\+233\s[0-9]{2}\s[0-9]{3}\s[0-9]{4}"
+                            title="Please enter a valid phone number in the format +233 XX XXX XXXX" required></label>
+                    <label>Business Name<input type="text" name="business" required autocomplete="organization"
+                            title="Your Business Name"></label>
+                    <label>Membership Levels
+                        <select name="membership" required>
+                            <option value="np-membership">Non Profit Membership Level</option>
+                            <option value="bronze-membership">Bronze Membership</option>
+                            <option value="silver-membership">Silver Membership</option>
+                            <option value="gold-membership">Gold Membership</option>
+                        </select>
+
+                    </label>
+
+                    <!-- Business/Organization Description -->
+                    <label>Business Description
+                        <textarea name="description" title="Please describe your business or organization" rows="4"
+                            cols="50"></textarea>
+                    </label>
+
+                    <!-- Hidden timestamp field - populated when form loads -->
+                    <input type="hidden" name="timestamp" id="timestamp">
+
+                    <input type="submit" value="Submit Application">
+                </form>
+            </div>
+
+            <!-- Right side - Membership Cards -->
+            <section id="mem-levels">
+                <h3>Membership Levels</h3>
+
+                <!-- Membership cards container -->
+                <div class="membership-cards">
+
+                    <!-- Non Profit Membership Card -->
+                    <div class="membership-card">
+                        <h4>Non Profit Membership</h4>
+                        <a href="#" class="info-link" onclick="openModal('nonprofit-modal')">Read More</a>
+                    </div>
+
+                    <!-- Bronze Membership Card -->
+                    <div class="membership-card bronze">
+                        <h4>Bronze Membership</h4>
+                        <a href="#" class="info-link" onclick="openModal('bronze-modal')">Read More</a>
+                    </div>
+
+                    <!-- Silver Membership Card -->
+                    <div class="membership-card silver">
+                        <h4>Silver Membership</h4>
+                        <a href="#" class="info-link" onclick="openModal('silver-modal')">Read More</a>
+                    </div>
+
+                    <!-- Gold Membership Card -->
+                    <div class="membership-card gold">
+                        <h4>Gold Membership</h4>
+                        <a href="#" class="info-link" onclick="openModal('gold-modal')">Read More</a>
+                    </div>
+
+                </div>
+            </section>
+        </div> <!-- End of join-container -->
+    </main>
+
+    <!-- Modal for Non Profit Membership -->
+    <div id="nonprofit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('nonprofit-modal')">&times;</span>
+            <h2>Non Profit Membership</h2>
+            <div class="modal-body">
+                <p class="membership-cost"><strong>Cost: FREE</strong></p>
+                <h3>Benefits Include:</h3>
+                <ul class="benefits-list">
+                    <li>✓ Basic directory listing</li>
+                    <li>✓ Access to community networking events</li>
+                    <li>✓ Monthly newsletter subscription</li>
+                    <li>✓ Volunteer opportunities coordination</li>
+                    <li>✓ Community partnership opportunities</li>
+                    <li>✓ Basic business resources access</li>
+                </ul>
+                <p class="membership-note">Perfect for non-profit organizations looking to connect with the business
+                    community.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Bronze Membership -->
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('bronze-modal')">&times;</span>
+            <h2>Bronze Membership</h2>
+            <div class="modal-body">
+                <p class="membership-cost"><strong>Cost: $200/year</strong></p>
+                <h3>All Non Profit Benefits Plus:</h3>
+                <ul class="benefits-list">
+                    <li>✓ Enhanced directory listing with logo</li>
+                    <li>✓ Monthly business mixer invitations</li>
+                    <li>✓ Chamber newsletter business spotlight</li>
+                    <li>✓ Business referral network access</li>
+                    <li>✓ 10% discount on chamber events</li>
+                    <li>✓ Access to member-only workshops</li>
+                    <li>✓ Business development resources</li>
+                </ul>
+                <p class="membership-note">Ideal for small businesses ready to grow their network and visibility.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Silver Membership -->
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('silver-modal')">&times;</span>
+            <h2>Silver Membership</h2>
+            <div class="modal-body">
+                <p class="membership-cost"><strong>Cost: $500/year</strong></p>
+                <h3>All Bronze Benefits Plus:</h3>
+                <ul class="benefits-list">
+                    <li>✓ Premium directory placement</li>
+                    <li>✓ Event sponsorship opportunities</li>
+                    <li>✓ Website spotlight features (quarterly)</li>
+                    <li>✓ Priority event booking and seating</li>
+                    <li>✓ Quarterly business development seminars</li>
+                    <li>✓ 20% discount on chamber events</li>
+                    <li>✓ Access to exclusive networking events</li>
+                    <li>✓ Marketing consultation sessions</li>
+                    <li>✓ Chamber ribbon cutting ceremonies</li>
+                </ul>
+                <p class="membership-note">Perfect for established businesses seeking greater community presence and
+                    marketing opportunities.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Gold Membership -->
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('gold-modal')">&times;</span>
+            <h2>Gold Membership</h2>
+            <div class="modal-body">
+                <p class="membership-cost"><strong>Cost: $1,000/year</strong></p>
+                <h3>All Silver Benefits Plus:</h3>
+                <ul class="benefits-list">
+                    <li>✓ Featured directory placement at top</li>
+                    <li>✓ VIP networking events and mixers</li>
+                    <li>✓ Homepage spotlight rotation (monthly)</li>
+                    <li>✓ Speaking opportunities at chamber events</li>
+                    <li>✓ Executive business development workshops</li>
+                    <li>✓ Government advocacy representation</li>
+                    <li>✓ FREE event venue usage (once per year)</li>
+                    <li>✓ 30% discount on all chamber events</li>
+                    <li>✓ Priority media coverage for business news</li>
+                    <li>✓ Chamber board nomination eligibility</li>
+                    <li>✓ Exclusive CEO/Executive roundtables</li>
+                </ul>
+                <p class="membership-note">Premium membership for industry leaders and major businesses seeking maximum
+                    visibility and influence.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site footer with contact information, social links, and page info -->
+    <footer>
+        <!-- Chamber contact information section -->
+        <div class="chamber-footer">
+            <h5>New Weija Chamber of Commerce</h5>
+            <p>Weija-Junction Weija, Near ITS</p>
+            <p>Email: info@wgma.gov.gh</p>
+            <p>(0)30 396 6118</p>
+        </div>
+
+        <!-- Social media links section -->
+        <div class="socials">
+            <!-- YouTube social link -->
+            <a href="https://youtube.com" target="_blank">
+                <img src="images/youtube.svg" alt="youtube icon">
+            </a>
+            <!-- Twitter social link -->
+            <a href="https://twitter.com/weijachamber" target="_blank">
+                <img src="images/twitter.svg" alt="twitter icon">
+            </a>
+            <!-- LinkedIn social link -->
+            <a href="https://www.LinkedIn.com" target="_blank">
+                <img src="images/linkedin.svg" alt="linkedin icon">
+            </a>
+        </div>
+
+        <!-- Page information and copyright section -->
+        <div class="info">
+            <p>WDD231 Class Project</p>
+            <p>Awuah Dennis</p>
+            <!-- Dynamic copyright year populated by JavaScript -->
+            <p>&copy; <span id="currentYear"></span> Weija Chamber of Commerce</p>
+            <!-- Dynamic last modified date populated by JavaScript -->
+            <p>Last Modified<span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
