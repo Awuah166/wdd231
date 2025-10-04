@@ -2,49 +2,65 @@
 <html lang="en">
 
 <head>
+    <!-- Basic HTML5 meta tags for character encoding and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Weija Chamber of Commerce</title>
-    <meta name="description" content="Weija Chamber of Commerce">
+    <title>Discover Weija - New Weija Chamber of Commerce</title>
+
+    <!-- SEO and page description meta tags for search engine optimization -->
+    <meta name="description" content="Discover the vibrant business community and attractions in Weija, Ghana">
     <meta name="author" content="Awuah Dennis">
     <link rel="icon" href="images/chamber-of-commerce.png">
 
-    <!--SOCIAL MEDIA META TAGS-->
-    <meta property="og:title" content="Weija Chamber of Commerce">
-    <meta property="og:description" content="Weija Chamber of Commerce">
-    <meta property="og:image" content="images/chamber-of-commerce.png">
-    <meta property="og:url" content="https://index.html">
+    <!-- Social media meta tags for better sharing when page is posted on social platforms -->
+    <meta property="og:title" content="Discover Weija - Chamber of Commerce">
+    <meta property="og:description" content="Discover the vibrant business community and attractions in Weija, Ghana">
+    <meta property="og:image" content="https://awuah166.github.io/wdd231/chamber/images/chamber-of-commerce.png">
+    <meta property="og:url" content="https://awuah166.github.io/wdd231/chamber/discover.html">
 
-    <!--LINKS-->
+    <!-- External font preconnection for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Main stylesheet for chamber website styling -->
     <link rel="stylesheet" href="styles/directory.css">
-    <script src="scripts/home.js" defer></script>
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <!-- JavaScript file loaded with defer for better performance -->
+    <script src="scripts/discover.js" type="module"></script>
 </head>
 
 <body>
+    <!-- Main site header with logo, title, navigation and mobile menu -->
     <header>
+        <!-- Chamber of Commerce logo -->
         <img src="images/chamber-of-commerce.png" alt="chamber of commerce logo">
+
+        <!-- Site title/brand name -->
         <span>New Weija Chamber of Commerce</span>
 
+        <!-- Main navigation menu -->
         <nav id="nav-bar" class="navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <!-- Current page marked as active -->
+                <li class="active"><a href="discover.html">Discover</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li class="active"><a href="join.html">Join</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
+
+        <!-- Mobile hamburger menu button for responsive navigation -->
         <button id="hum-btn" class="hamburger" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     </header>
 
+    <!-- Main content area for discover page content -->
     <main>
-        <section class="thank-you">
-            <h1>Thank You!</h1>
-            <p>Thank you for your interest in joining the Weija Chamber of Commerce.</p>
-            <p>Your application has been successfully submitted and we will contact you soon.</p>
-            <a href="index.html">Return to Home</a>
-        </section>
+        <!-- Content for discover page will be added here -->
+        <h1>Discover Weija</h1>
+
+        <!-- Dynamic content such as places of interest will be populated here by JavaScript -->
+        <section id="places-container" class="places-container"></section>
     </main>
 
     <!-- Site footer with contact information, social links, and page info -->

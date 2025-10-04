@@ -1,5 +1,42 @@
 // Join page JavaScript functionality
 
+// Mobile hamburger toggle (simple in-flow menu)
+const humBtn = document.getElementById('hum-btn');
+const nav = document.getElementById('nav-bar');
+
+if (humBtn && nav) {
+    humBtn.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('open');
+        humBtn.textContent = isOpen ? '✕' : '☰';
+        humBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+}
+
+// Insert current year and last modified timestamp
+function populateTimestamps() {
+    const yearEl = document.getElementById('currentYear');
+    const lastModEl = document.getElementById('lastModified');
+
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+
+    if (lastModEl) {
+        // Format last modified in a short readable form
+        const raw = document.lastModified;
+        if (raw) {
+            const d = new Date(raw);
+            if (!isNaN(d)) {
+                lastModEl.textContent = `: ${d.toLocaleString()}`;
+            } else {
+                lastModEl.textContent = `: ${raw}`;
+            }
+        } else {
+            lastModEl.textContent = '';
+        }
+    }
+}
+
 // Modal functionality
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
@@ -55,6 +92,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+
+    // Insert current year and last modified timestamp
+    populateTimestamps();
 
     // Populate timestamp field when form loads
     const timestampField = document.getElementById('timestamp');
